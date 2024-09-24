@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="2">
+
+    <!-- Test 1: Running on Google Pixel -->
+    <test name="Android Test on Google Pixel" >
+        <parameter name="platformName" value="android" />
+        <parameter name="deviceName" value="OnePlus 10 Pro" />
+        <parameter name="platformVersion" value="12" />
+        <parameter name="app" value="lt://APP10160602371727161215944887" />
+        <parameter name="dataIndex" value="0" /> <!-- Index for first set of data -->
+        <classes>
+            <class name="org.cooee.AndroidTest">
+                <methods>
+                    <include name="OutBoundCall"/> <!-- Include only the OutBoundCall test -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <!-- Test 2: Running on another device -->
+    <test name="Android Test on Another Device">
+        <parameter name="platformName" value="android" />
+        <parameter name="deviceName" value="Redmi Note 9" /> <!-- Example device, change as needed -->
+        <parameter name="platformVersion" value="11" /> <!-- Example version, change as needed -->
+        <parameter name="app" value="lt://APP10160602371727161215944887" />
+        <parameter name="dataIndex" value="1" /> <!-- Index for first set of data -->
+        <classes>
+            <class name="org.cooee.AndroidTest">
+                <methods>
+                    <include name="OutBoundCall"/> <!-- Include only the InBoundCall test -->
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" name="Android Test on Google Pixel(failed)">
+    <parameter name="app" value="lt://APP10160602371727161215944887"/>
+    <parameter name="dataIndex" value="0"/>
+    <parameter name="platformVersion" value="12"/>
+    <parameter name="platformName" value="android"/>
+    <parameter name="deviceName" value="OnePlus 10 Pro"/>
+    <classes>
+      <class name="org.cooee.AndroidTest">
+        <methods>
+          <include name="OutBoundCall"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="configureAppium"/>
+        </methods>
+      </class> <!-- org.cooee.AndroidTest -->
+    </classes>
+  </test> <!-- Android Test on Google Pixel(failed) -->
+  <test thread-count="2" name="Android Test on Another Device(failed)">
+    <parameter name="app" value="lt://APP10160602371727161215944887"/>
+    <parameter name="dataIndex" value="1"/>
+    <parameter name="platformVersion" value="11"/>
+    <parameter name="platformName" value="android"/>
+    <parameter name="deviceName" value="Redmi Note 9"/>
+    <classes>
+      <class name="org.cooee.AndroidTest">
+        <methods>
+          <include name="OutBoundCall"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="configureAppium"/>
+        </methods>
+      </class> <!-- org.cooee.AndroidTest -->
+    </classes>
+  </test> <!-- Android Test on Another Device(failed) -->
+</suite> <!-- Failed suite [Suite] -->
